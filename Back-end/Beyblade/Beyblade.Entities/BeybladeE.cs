@@ -10,6 +10,9 @@ namespace Beyblade.Entities
         public Disk Disk { get; private set; }
         public Frame Frame { get; private set; }
         public Driver Driver { get; private set; }
+        public int Attack { get; private set; }
+        public int Defense { get; private set; }
+        public int Stamina { get; private set; }
 
         public BeybladeE(Layer layer, Disk disk, Frame frame, Driver driver)
         {
@@ -33,6 +36,10 @@ namespace Beyblade.Entities
                 throw new Exception("You need a driver in every Beyblade to make it work");
 
             Driver = driver;
+
+            Attack = Layer.Attack + Disk.Attack + Driver.Attack;
+            Defense = Layer.Defense + Disk.Defense + Driver.Defense;
+            Stamina = Layer.Stamina + Disk.Stamina + Driver.Stamina;
         }
     }
 }

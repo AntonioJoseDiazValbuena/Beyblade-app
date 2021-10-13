@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31727.386
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beyblade.Entities", "Beyblade.Entities\Beyblade.Entities.csproj", "{616EE5D9-37F2-4C0B-8FFE-39ECFF1F5360}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Beyblade.Entities", "Beyblade.Entities\Beyblade.Entities.csproj", "{616EE5D9-37F2-4C0B-8FFE-39ECFF1F5360}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beyblade.Services", "Beyblade.Services\Beyblade.Services.csproj", "{6C3FD984-D3ED-4773-9930-7E63A10C8972}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Beyblade.Services", "Beyblade.Services\Beyblade.Services.csproj", "{6C3FD984-D3ED-4773-9930-7E63A10C8972}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beyblade.Services.Interfaces", "Beyblade.Services.Interfaces\Beyblade.Services.Interfaces.csproj", "{420A14C2-8EEE-4DF9-B3D4-DEB6D4F167D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Beyblade.Services.Interfaces", "Beyblade.Services.Interfaces\Beyblade.Services.Interfaces.csproj", "{420A14C2-8EEE-4DF9-B3D4-DEB6D4F167D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beyblade.Tests", "Beyblade.Tests\Beyblade.Tests.csproj", "{9D118883-9E6D-4CAF-9755-967DB03A1113}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{420A14C2-8EEE-4DF9-B3D4-DEB6D4F167D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{420A14C2-8EEE-4DF9-B3D4-DEB6D4F167D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{420A14C2-8EEE-4DF9-B3D4-DEB6D4F167D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D118883-9E6D-4CAF-9755-967DB03A1113}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D118883-9E6D-4CAF-9755-967DB03A1113}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D118883-9E6D-4CAF-9755-967DB03A1113}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D118883-9E6D-4CAF-9755-967DB03A1113}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

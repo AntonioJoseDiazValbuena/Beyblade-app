@@ -10,10 +10,11 @@ namespace Beyblade.Entities
         public int Weight { get; private set; }
         public Frame(string name, int wegiht)
         {
+            if (string.IsNullOrEmpty(name))
+                throw new Exception("The Frame should have a name.");
+
             if (wegiht > 15)
-            {
                 throw new Exception("There aren't any frames that weight over 15 grams.");
-            }
 
             Name = name;
             Weight = wegiht;
