@@ -6,6 +6,9 @@ namespace Beyblade.Entities
 {
     public class Frame
     {
+        private const int MAXIMUM_WEIGHT = 15;
+        public static readonly string MAXIMUM_WEIGHT_MESSAGE = "There aren't any frames that weight over 15 grams.";
+
         public string Name { get; private set; }
         public int Weight { get; private set; }
         public Frame(string name, int wegiht)
@@ -13,8 +16,8 @@ namespace Beyblade.Entities
             if (string.IsNullOrEmpty(name))
                 throw new Exception("The Frame should have a name.");
 
-            if (wegiht > 15)
-                throw new Exception("There aren't any frames that weight over 15 grams.");
+            if (wegiht > MAXIMUM_WEIGHT)
+                throw new Exception(Frame.MAXIMUM_WEIGHT_MESSAGE);
 
             Name = name;
             Weight = wegiht;

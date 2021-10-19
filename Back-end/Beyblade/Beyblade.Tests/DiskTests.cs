@@ -33,7 +33,7 @@ namespace Beyblade.Tests
         [TestMethod]
         public void Should_Disk_IfWeightIsMoreThan40_ThrowError()
         {
-            string name = "Valkyrie";
+            string name = "12";
             bool canUseFrame = true;
             int weight = 41;
             int attack = 20;
@@ -54,7 +54,7 @@ namespace Beyblade.Tests
         [TestMethod]
         public void Should_Disk_IfAttackIsMoreThan100_ThrowError()
         {
-            string name = "Valkyrie";
+            string name = "12";
             bool canUseFrame = true;
             int weight = 20;
             int attack = 102;
@@ -75,7 +75,7 @@ namespace Beyblade.Tests
         [TestMethod]
         public void Should_Disk_IfDefenseIsMoreThan100_ThrowError()
         {
-            string name = "Valkyrie";
+            string name = "12";
             bool canUseFrame = true;
             int weight = 20;
             int attack = 20;
@@ -96,7 +96,7 @@ namespace Beyblade.Tests
         [TestMethod]
         public void Should_Disk_IfStaminaIsMoreThan100_ThrowError()
         {
-            string name = "Valkyrie";
+            string name = "12";
             bool canUseFrame = true;
             int weight = 20;
             int attack = 20;
@@ -117,7 +117,7 @@ namespace Beyblade.Tests
         [TestMethod]
         public void Should_Disk_IfDefenseIsEqualToAttack_ThrowError()
         {
-            string name = "Valkyrie";
+            string name = "12";
             bool canUseFrame = true;
             int weight = 20;
             int attack = 20;
@@ -138,7 +138,7 @@ namespace Beyblade.Tests
         [TestMethod]
         public void Should_Disk_IfDefenseAndAttackHaveDifferenceOfLessThanTen_ThrowError()
         {
-            string name = "Valkyrie";
+            string name = "12";
             bool canUseFrame = true;
             int weight = 20;
             int attack = 20;
@@ -159,7 +159,7 @@ namespace Beyblade.Tests
         [TestMethod]
         public void Should_Disk_IfStaminaIsEqualToAttack_ThrowError()
         {
-            string name = "Valkyrie";
+            string name = "12";
             bool canUseFrame = true;
             int weight = 20;
             int attack = 20;
@@ -180,7 +180,7 @@ namespace Beyblade.Tests
         [TestMethod]
         public void Should_Disk_IfStaminaAndAttackHaveDifferenceOfLessThanFive_ThrowError()
         {
-            string name = "Valkyrie";
+            string name = "12";
             bool canUseFrame = true;
             int weight = 20;
             int attack = 20;

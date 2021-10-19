@@ -33,7 +33,7 @@ namespace Beyblade.Tests
         [TestMethod]
         public void Should_Driver_IfWeightIsMoreThan15_ThrowError()
         {
-            string name = "Valkyrie";
+            string name = "Accel";
             DriverType type = DriverType.Attack;
             int weight = 16;
             int attack = 20;
@@ -54,7 +54,7 @@ namespace Beyblade.Tests
         [TestMethod]
         public void Should_Driver_IfAttackIsMoreThan100_ThrowError()
         {
-            string name = "Valkyrie";
+            string name = "Accel";
             DriverType type = DriverType.Attack;
             int weight = 15;
             int attack = 102;
@@ -75,7 +75,7 @@ namespace Beyblade.Tests
         [TestMethod]
         public void Should_Driver_IfDefenseIsMoreThan100_ThrowError()
         {
-            string name = "Valkyrie";
+            string name = "Accel";
             DriverType type = DriverType.Attack;
             int weight = 15;
             int attack = 20;
@@ -96,7 +96,7 @@ namespace Beyblade.Tests
         [TestMethod]
         public void Should_Driver_IfStaminaIsMoreThan100_ThrowError()
         {
-            string name = "Valkyrie";
+            string name = "Accel";
             DriverType type = DriverType.Attack;
             int weight = 15;
             int attack = 20;
@@ -117,7 +117,7 @@ namespace Beyblade.Tests
         [TestMethod]
         public void Should_Driver_IfDefenseIsEqualToAttack_ThrowError()
         {
-            string name = "Valkyrie";
+            string name = "Accel";
             DriverType type = DriverType.Attack;
             int weight = 15;
             int attack = 20;
@@ -138,7 +138,7 @@ namespace Beyblade.Tests
         [TestMethod]
         public void Should_Driver_IfDefenseAndAttackHaveDifferenceOfLessThanTen_ThrowError()
         {
-            string name = "Valkyrie";
+            string name = "Accel";
             DriverType type = DriverType.Attack;
             int weight = 15;
             int attack = 20;
@@ -159,7 +159,7 @@ namespace Beyblade.Tests
         [TestMethod]
         public void Should_Driver_IfStaminaIsEqualToAttack_ThrowError()
         {
-            string name = "Valkyrie";
+            string name = "Accel";
             DriverType type = DriverType.Attack;
             int weight = 15;
             int attack = 20;
@@ -180,7 +180,7 @@ namespace Beyblade.Tests
         [TestMethod]
         public void Should_Driver_IfStaminaAndAttackHaveDifferenceOfLessThanFive_ThrowError()
         {
-            string name = "Valkyrie";
+            string name = "Accel";
             DriverType type = DriverType.Attack;
             int weight = 15;
             int attack = 20;

@@ -29,7 +29,7 @@ namespace Beyblade.Tests
         [TestMethod]
         public void Should_Frame_IfWeightIsMoreThan15_ThrowError()
         {
-            string name = "Valkyrie";
+            string name = "Lift";
             int weight = 16;
 
             try
@@ -39,7 +39,7 @@ namespace Beyblade.Tests
             }
             catch (Exception exception)
             {
-                Assert.AreEqual("There aren't any frames that weight over 15 grams.", exception.Message);
+                Assert.AreEqual(Frame.MAXIMUM_WEIGHT_MESSAGE, exception.Message);
             }
         }
     }
