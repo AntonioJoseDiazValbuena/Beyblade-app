@@ -3,8 +3,9 @@ using System;
 
 namespace Beyblade.Services.Interfaces
 {
-    public interface IBeybladeContext
+    public interface IBeybladeServices
     {
+        Layer ObtainLayer(string name);
         void RegisterLayer(Layer layer);
         void RegisterDisk(Disk disk);
         void RegisterFrame(Frame frame);

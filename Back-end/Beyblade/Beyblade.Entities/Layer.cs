@@ -6,6 +6,7 @@ namespace Beyblade.Entities
 {
     public class Layer
     {
+        public int Id { get; private set; }
         public string Name { get; private set; }
         public bool CanUseDisk { get; private set; }
         public int Weight { get; private set; }
