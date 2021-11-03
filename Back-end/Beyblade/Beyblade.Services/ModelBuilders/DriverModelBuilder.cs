@@ -14,6 +14,7 @@ namespace Beyblade.Services.ModelBuilders
         public void Configure(EntityTypeBuilder<Driver> part)
         {
             part.HasKey(p => p.Id);
+            part.Property(p => p.Id);
             part.Property(p => p.Name).HasMaxLength(50);
             part.Property(p => p.Type);
             part.Property(p => p.Weight);

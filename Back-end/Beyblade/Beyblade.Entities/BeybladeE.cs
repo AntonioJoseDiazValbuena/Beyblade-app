@@ -18,6 +18,7 @@ namespace Beyblade.Entities
         public int Attack { get; private set; }
         public int Defense { get; private set; }
         public int Stamina { get; private set; }
+        public int weight { get; private set; }
 
         public BeybladeE(Layer layer, Driver driver, Disk disk = null, Frame frame = null)
         {
@@ -50,6 +51,7 @@ namespace Beyblade.Entities
             Attack = Layer.Attack + Disk.Attack + Driver.Attack;
             Defense = Layer.Defense + Disk.Defense + Driver.Defense;
             Stamina = Layer.Stamina + Disk.Stamina + Driver.Stamina;
+            weight = Layer.Weight + Disk.Weight + Driver.Weight;
         }
     }
 }

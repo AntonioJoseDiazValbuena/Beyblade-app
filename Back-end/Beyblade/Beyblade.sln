@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Beyblade.Services", "Beybla
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Beyblade.Services.Interfaces", "Beyblade.Services.Interfaces\Beyblade.Services.Interfaces.csproj", "{420A14C2-8EEE-4DF9-B3D4-DEB6D4F167D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beyblade.Tests", "Beyblade.Tests\Beyblade.Tests.csproj", "{9D118883-9E6D-4CAF-9755-967DB03A1113}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Beyblade.Tests", "Beyblade.Tests\Beyblade.Tests.csproj", "{9D118883-9E6D-4CAF-9755-967DB03A1113}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beyblade.Api", "Beyblade.Api\Beyblade.Api.csproj", "{07E9A855-80BB-4710-8A44-8D10E2897D4B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{9D118883-9E6D-4CAF-9755-967DB03A1113}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D118883-9E6D-4CAF-9755-967DB03A1113}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9D118883-9E6D-4CAF-9755-967DB03A1113}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07E9A855-80BB-4710-8A44-8D10E2897D4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07E9A855-80BB-4710-8A44-8D10E2897D4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07E9A855-80BB-4710-8A44-8D10E2897D4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07E9A855-80BB-4710-8A44-8D10E2897D4B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

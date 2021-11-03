@@ -18,7 +18,7 @@ namespace Beyblade.Entities
                 throw new Exception("The Frame should have a name.");
 
             if (weight > MAXIMUM_WEIGHT)
-                throw new Exception(Frame.MAXIMUM_WEIGHT_MESSAGE);
+                throw new Exception(MAXIMUM_WEIGHT_MESSAGE);
 
             Name = name;
             Weight = weight;

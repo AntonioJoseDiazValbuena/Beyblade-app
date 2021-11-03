@@ -24,6 +24,8 @@ namespace Beyblade.Services
             modelBuilder.ApplyConfiguration(new FrameModelBuilder());
             modelBuilder.ApplyConfiguration(new DriverModelBuilder());
             modelBuilder.ApplyConfiguration(new LayerModelBuilder());
+
+            base.OnModelCreating(modelBuilder);
         }
     }
 }
