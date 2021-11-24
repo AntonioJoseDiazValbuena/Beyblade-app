@@ -12,9 +12,9 @@ namespace Beyblade.Services.Interfaces
         List<Disk> ObtainDisks();
         Disk ObtainDisk(string name);
         void RegisterDisk(Disk disk);
-        List<Frame> ObtainFrames();
+        /*List<Frame> ObtainFrames();
         Frame ObtainFrame(string name);
-        void RegisterFrame(Frame frame);
+        void RegisterFrame(Frame frame);*/
         List<Driver> ObtainDrivers();
         Driver ObtainDriver(string name);
         void RegisterDriver(Driver driver);

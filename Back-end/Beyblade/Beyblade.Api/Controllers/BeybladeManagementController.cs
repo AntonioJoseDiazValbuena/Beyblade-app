@@ -54,7 +54,7 @@ namespace Beyblade.Api.Controllers
             _beybladeServices.RegisterDisk(disk);
         }
 
-        [HttpGet]
+        /*[HttpGet]
         [Route("Frames")]
         public List<Frame> ObtainFrames()
         {
@@ -66,7 +66,7 @@ namespace Beyblade.Api.Controllers
         public void RegisterFrame(Frame frame)
         {
             _beybladeServices.RegisterFrame(frame);
-        }
+        }*/
 
         [HttpGet]
         [Route("Drivers")]

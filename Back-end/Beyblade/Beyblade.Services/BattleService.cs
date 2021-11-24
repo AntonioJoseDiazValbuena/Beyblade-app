@@ -89,10 +89,10 @@ namespace Beyblade.Services
             //else if (secondBeyblade.Driver.Type == DriverType.Defense && firstBeyblade.Driver.Type == DriverType.Stamina)
             //    firstBeybladePoints += 15;
 
-            if (firstBeyblade.weight > secondBeyblade.weight)
-                firstBeybladePoints += (firstBeyblade.weight - secondBeyblade.weight);
-            else if (firstBeyblade.weight < secondBeyblade.weight)
-                secondBeybladePoints += (secondBeyblade.weight - firstBeyblade.weight);
+            if (firstBeyblade.Weight > secondBeyblade.Weight)
+                firstBeybladePoints += (firstBeyblade.Weight - secondBeyblade.Weight);
+            else if (firstBeyblade.Weight < secondBeyblade.Weight)
+                secondBeybladePoints += (secondBeyblade.Weight - firstBeyblade.Weight);
 
             if (firstBeybladePoints > secondBeybladePoints)
                 return $"{WINNER} {firstBeyblade.Layer.Name} {firstBeyblade.Disk.Name} {firstBeyblade.Driver.Name}";

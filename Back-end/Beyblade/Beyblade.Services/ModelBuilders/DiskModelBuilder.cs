@@ -16,7 +16,7 @@ namespace Beyblade.Services.ModelBuilders
             part.HasKey(p => p.Id);
             part.Property(p => p.Id);
             part.Property(p => p.Name).HasMaxLength(50);
-            part.Property(p => p.CanUseFrame);
+            //part.Property(p => p.CanUseFrame);
             part.Property(p => p.Weight);
             part.Property(p => p.Attack);
             part.Property(p => p.Defense);

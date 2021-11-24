@@ -13,14 +13,15 @@ namespace Beyblade.Entities
 
         public Layer Layer { get; private set; }
         public Disk Disk { get; private set; }
-        public Frame Frame { get; private set; }
+        //public Frame Frame { get; private set; }
         public Driver Driver { get; private set; }
         public int Attack { get; private set; }
         public int Defense { get; private set; }
         public int Stamina { get; private set; }
-        public int weight { get; private set; }
+        public int Weight { get; private set; }
 
-        public BeybladeE(Layer layer, Driver driver, Disk disk = null, Frame frame = null)
+        //public BeybladeE(Layer layer, Driver driver, Disk disk = null, Frame frame = null)
+        public BeybladeE(Layer layer, Driver driver, Disk disk = null)
         {
             if (layer == null)
                 throw new Exception(BeybladeE.LAYER_REQUIRED);
@@ -34,8 +35,8 @@ namespace Beyblade.Entities
 
                 Disk = disk;
 
-                if (disk.CanUseFrame)
-                    Frame = frame;
+                /*if (disk.CanUseFrame)
+                    Frame = frame;*/
 
             }
             else if (disk != null)
@@ -51,7 +52,7 @@ namespace Beyblade.Entities
             Attack = Layer.Attack + Disk.Attack + Driver.Attack;
             Defense = Layer.Defense + Disk.Defense + Driver.Defense;
             Stamina = Layer.Stamina + Disk.Stamina + Driver.Stamina;
-            weight = Layer.Weight + Disk.Weight + Driver.Weight;
+            Weight = Layer.Weight + Disk.Weight + Driver.Weight;
         }
     }
 }

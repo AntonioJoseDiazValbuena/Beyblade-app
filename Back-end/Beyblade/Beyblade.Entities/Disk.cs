@@ -6,7 +6,7 @@ namespace Beyblade.Entities
     {
         public int Id { get; private set; }
         public string Name { get; private set; }
-        public bool CanUseFrame { get; private set; }
+        //public bool CanUseFrame { get; private set; }
         public int Weight { get; private set; }
         public int Attack { get; private set; }
         public int Defense { get; private set; }
@@ -36,7 +36,7 @@ namespace Beyblade.Entities
                 throw new Exception("The stamina and the attack of the Disk should have a difference of minimum 5 points.");
 
             Name = name;
-            CanUseFrame = canUseFrame;
+            //CanUseFrame = canUseFrame;
             Weight = weight;
             Attack = attack;
             Defense = defense;

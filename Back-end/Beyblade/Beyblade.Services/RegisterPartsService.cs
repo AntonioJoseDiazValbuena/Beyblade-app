@@ -41,7 +41,7 @@ namespace Beyblade.Services
             SaveChanges();
         }
 
-        public Frame ObtainFrame(string name)
+        /*public Frame ObtainFrame(string name)
         {
             return Frames.FirstOrDefault(prop => prop.Name.ToLower() == name.ToLower());
         }
@@ -53,7 +53,7 @@ namespace Beyblade.Services
 
             Frames.Add(frame);
             SaveChanges();
-        }
+        }*/
 
         public Driver ObtainDriver(string name)
         {
