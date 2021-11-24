@@ -14,7 +14,8 @@ namespace Beyblade.Tests
         {
             //Layer layer = new Layer("Valkyrie", true, 18, 20, 10, 15);
             Layer layer = null;
-            Disk disk = new Disk("Wing", false, 24, 10, 20, 18);
+            //Disk disk = new Disk("Wing", false, 24, 10, 20, 18);
+            Disk disk = new Disk("Wing", 24, 10, 20, 18);
             Driver driver = new Driver("Accel", DriverType.Attack, 6, 18, 8, 23);
 
             try
@@ -32,7 +33,8 @@ namespace Beyblade.Tests
         public void Should_BeybladeE_IfLayerCantUseDiskAndAddOne_ThrowError()
         {
             Layer layer = new Layer("Valkyrie", false, 18, 20, 10, 15);
-            Disk disk = new Disk("Wing", false, 24, 10, 20, 18);
+            //Disk disk = new Disk("Wing", false, 24, 10, 20, 18);
+            Disk disk = new Disk("Wing", 24, 10, 20, 18);
             Driver driver = new Driver("Accel", DriverType.Attack, 6, 18, 8, 23);
 
             try
@@ -69,7 +71,8 @@ namespace Beyblade.Tests
         public void Should_BeybladeE_IfBeybladeDontHaveDriver_ThrowError()
         {
             Layer layer = new Layer("Valkyrie", true, 18, 20, 10, 15);
-            Disk disk = new Disk("Wing", false, 24, 10, 20, 18);
+            //Disk disk = new Disk("Wing", false, 24, 10, 20, 18);
+            Disk disk = new Disk("Wing", 24, 10, 20, 18);
             Driver driver = null;
 
             try

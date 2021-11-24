@@ -64,9 +64,11 @@ namespace Beyblade.Tests
         [TestMethod]
         public void Should_RegisterDisk()
         {
-            Disk expectedDisk = new Disk("Wing", false, 19, 20, 10, 15);
+            //Disk expectedDisk = new Disk("Wing", false, 19, 20, 10, 15);
+            Disk expectedDisk = new Disk("Wing", 19, 20, 10, 15);
 
-            _services.RegisterDisk(new Disk("Wing", false, 19, 20, 10, 15));
+            //_services.RegisterDisk(new Disk("Wing", false, 19, 20, 10, 15));
+            _services.RegisterDisk(new Disk("Wing", 19, 20, 10, 15));
 
             Disk actualDisk = _services.ObtainDisk("Wing");
 
@@ -81,11 +83,13 @@ namespace Beyblade.Tests
         [TestMethod]
         public void Should_RegisterDisk_WhenTryingToRegisterADiskAndTheresRegisteredAlreadyOneWithTheSameName_ThrowError()
         {
-            _services.RegisterDisk(new Disk("Heavy", false, 19, 10, 20, 15));
+            //_services.RegisterDisk(new Disk("Heavy", false, 19, 10, 20, 15));
+            _services.RegisterDisk(new Disk("Heavy", 19, 10, 20, 15));
 
             try
             {
-                _services.RegisterDisk(new Disk("Heavy", false, 19, 10, 20, 15));
+                //_services.RegisterDisk(new Disk("Heavy", false, 19, 10, 20, 15));
+                _services.RegisterDisk(new Disk("Heavy", 19, 10, 20, 15));
                 Assert.Fail();
             }
             catch (Exception exception)

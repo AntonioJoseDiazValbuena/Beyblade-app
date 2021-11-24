@@ -12,7 +12,8 @@ namespace Beyblade.Entities
         public int Defense { get; private set; }
         public int Stamina { get; private set; }
 
-        public Disk(string name, bool canUseFrame, int weight, int attack, int defense, int stamina)
+        //public Disk(string name, bool canUseFrame, int weight, int attack, int defense, int stamina)
+        public Disk(string name, int weight, int attack, int defense, int stamina)
         {
             if (string.IsNullOrEmpty(name))
                 throw new Exception("The Disk should have a name.");

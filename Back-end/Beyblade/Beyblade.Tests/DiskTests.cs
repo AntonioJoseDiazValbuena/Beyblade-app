@@ -13,7 +13,7 @@ namespace Beyblade.Tests
         public void Should_Disk_IfNameIsNullOrEmpty_ThrowError()
         {
             string name = null;
-            bool canUseFrame = true;
+            //bool canUseFrame = true;
             int weight = 41;
             int attack = 20;
             int defense = 10;
@@ -21,7 +21,8 @@ namespace Beyblade.Tests
 
             try
             {
-                Disk disk = new Disk(name, canUseFrame, weight, attack, defense, stamina);
+                //Disk disk = new Disk(name, canUseFrame, weight, attack, defense, stamina);
+                Disk disk = new Disk(name, weight, attack, defense, stamina);
                 Assert.Fail();
             }
             catch (Exception exception)
@@ -34,7 +35,7 @@ namespace Beyblade.Tests
         public void Should_Disk_IfWeightIsMoreThan40_ThrowError()
         {
             string name = "12";
-            bool canUseFrame = true;
+            //bool canUseFrame = true;
             int weight = 41;
             int attack = 20;
             int defense = 10;
@@ -42,7 +43,8 @@ namespace Beyblade.Tests
 
             try
             {
-                Disk disk = new Disk(name, canUseFrame, weight, attack, defense, stamina);
+                //Disk disk = new Disk(name, canUseFrame, weight, attack, defense, stamina);
+                Disk disk = new Disk(name, weight, attack, defense, stamina);
                 Assert.Fail();
             }
             catch (Exception exception)
@@ -55,7 +57,7 @@ namespace Beyblade.Tests
         public void Should_Disk_IfAttackIsMoreThan100_ThrowError()
         {
             string name = "12";
-            bool canUseFrame = true;
+            //bool canUseFrame = true;
             int weight = 20;
             int attack = 102;
             int defense = 10;
@@ -63,7 +65,8 @@ namespace Beyblade.Tests
 
             try
             {
-                Disk disk = new Disk(name, canUseFrame, weight, attack, defense, stamina);
+                //Disk disk = new Disk(name, canUseFrame, weight, attack, defense, stamina);
+                Disk disk = new Disk(name, weight, attack, defense, stamina);
                 Assert.Fail();
             }
             catch (Exception exception)
@@ -76,7 +79,7 @@ namespace Beyblade.Tests
         public void Should_Disk_IfDefenseIsMoreThan100_ThrowError()
         {
             string name = "12";
-            bool canUseFrame = true;
+            //bool canUseFrame = true;
             int weight = 20;
             int attack = 20;
             int defense = 103;
@@ -84,7 +87,8 @@ namespace Beyblade.Tests
 
             try
             {
-                Disk disk = new Disk(name, canUseFrame, weight, attack, defense, stamina);
+                //Disk disk = new Disk(name, canUseFrame, weight, attack, defense, stamina);
+                Disk disk = new Disk(name, weight, attack, defense, stamina);
                 Assert.Fail();
             }
             catch (Exception exception)
@@ -97,7 +101,7 @@ namespace Beyblade.Tests
         public void Should_Disk_IfStaminaIsMoreThan100_ThrowError()
         {
             string name = "12";
-            bool canUseFrame = true;
+            //bool canUseFrame = true;
             int weight = 20;
             int attack = 20;
             int defense = 10;
@@ -105,7 +109,8 @@ namespace Beyblade.Tests
 
             try
             {
-                Disk disk = new Disk(name, canUseFrame, weight, attack, defense, stamina);
+                //Disk disk = new Disk(name, canUseFrame, weight, attack, defense, stamina);
+                Disk disk = new Disk(name, weight, attack, defense, stamina);
                 Assert.Fail();
             }
             catch (Exception exception)
@@ -118,7 +123,7 @@ namespace Beyblade.Tests
         public void Should_Disk_IfDefenseIsEqualToAttack_ThrowError()
         {
             string name = "12";
-            bool canUseFrame = true;
+            //bool canUseFrame = true;
             int weight = 20;
             int attack = 20;
             int defense = 20;
@@ -126,7 +131,8 @@ namespace Beyblade.Tests
 
             try
             {
-                Disk disk = new Disk(name, canUseFrame, weight, attack, defense, stamina);
+                //Disk disk = new Disk(name, canUseFrame, weight, attack, defense, stamina);
+                Disk disk = new Disk(name, weight, attack, defense, stamina);
                 Assert.Fail();
             }
             catch (Exception exception)
@@ -139,7 +145,7 @@ namespace Beyblade.Tests
         public void Should_Disk_IfDefenseAndAttackHaveDifferenceOfLessThanTen_ThrowError()
         {
             string name = "12";
-            bool canUseFrame = true;
+            //bool canUseFrame = true;
             int weight = 20;
             int attack = 20;
             int defense = 15;
@@ -147,7 +153,8 @@ namespace Beyblade.Tests
 
             try
             {
-                Disk disk = new Disk(name, canUseFrame, weight, attack, defense, stamina);
+                //Disk disk = new Disk(name, canUseFrame, weight, attack, defense, stamina);
+                Disk disk = new Disk(name, weight, attack, defense, stamina);
                 Assert.Fail();
             }
             catch (Exception exception)
@@ -160,7 +167,7 @@ namespace Beyblade.Tests
         public void Should_Disk_IfStaminaIsEqualToAttack_ThrowError()
         {
             string name = "12";
-            bool canUseFrame = true;
+            //bool canUseFrame = true;
             int weight = 20;
             int attack = 20;
             int defense = 9;
@@ -168,7 +175,8 @@ namespace Beyblade.Tests
 
             try
             {
-                Disk disk = new Disk(name, canUseFrame, weight, attack, defense, stamina);
+                //Disk disk = new Disk(name, canUseFrame, weight, attack, defense, stamina);
+                Disk disk = new Disk(name, weight, attack, defense, stamina);
                 Assert.Fail();
             }
             catch (Exception exception)
@@ -181,7 +189,7 @@ namespace Beyblade.Tests
         public void Should_Disk_IfStaminaAndAttackHaveDifferenceOfLessThanFive_ThrowError()
         {
             string name = "12";
-            bool canUseFrame = true;
+            //bool canUseFrame = true;
             int weight = 20;
             int attack = 20;
             int defense = 10;
@@ -189,7 +197,8 @@ namespace Beyblade.Tests
 
             try
             {
-                Disk disk = new Disk(name, canUseFrame, weight, attack, defense, stamina);
+                //Disk disk = new Disk(name, canUseFrame, weight, attack, defense, stamina);
+                Disk disk = new Disk(name, weight, attack, defense, stamina);
                 Assert.Fail();
             }
             catch (Exception exception)
