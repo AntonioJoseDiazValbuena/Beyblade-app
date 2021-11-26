@@ -1,4 +1,5 @@
 ﻿using Beyblade.Entities;
+using Beyblade.Entities.DTO;
 using Beyblade.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -19,11 +20,11 @@ namespace Beyblade.Api.Controllers
             _beybladeServices = beybladeServices;
         }
 
-        [HttpGet]
+        [HttpPost]
         [Route("Battle")]
-        public string Battle(BeybladeE firstBeyblade, BeybladeE secondBeyblade)
+        public string Battle(BeybladeBattle beybladeBattle)
         {
-            return _beybladeServices.StartBattle(firstBeyblade, secondBeyblade);
+            return _beybladeServices.StartBattle(beybladeBattle.FirstBeyblade, beybladeBattle.SecondBeyblade);
         }
 
         [HttpGet]

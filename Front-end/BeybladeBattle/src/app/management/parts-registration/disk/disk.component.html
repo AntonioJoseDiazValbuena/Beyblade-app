@@ -1,0 +1,32 @@
+<div>
+    <div *ngIf="alert">
+        <strong>{{alertMessage}}</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close" (click)="closeAlert()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <h2>Disk</h2>
+    <div>
+        <h3>Name</h3>
+        <input type="text" minlength="1" maxlength="50" [(ngModel)]="diskName">
+    </div>
+    <div>
+        <h3>Attack</h3>
+        <input type="number" min="1" max="100" [(ngModel)]="diskAttack">
+    </div>
+    <div>
+        <h3>Defense</h3>
+        <input type="number" min="1" max="100" [(ngModel)]="diskDefense">
+    </div>
+    <div>
+        <h3>Stamina</h3>
+        <input type="number" min="1" max="100" [(ngModel)]="diskStamina">
+    </div>
+    <div>
+        <h3>Weight</h3>
+        <input type="number" min="1" max="40" [(ngModel)]="diskWeight">
+    </div>
+</div>
+<div>
+    <button (click)="saveDisk()">Save</button>
+</div>

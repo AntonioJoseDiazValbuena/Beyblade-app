@@ -1,32 +1,37 @@
+export interface BeybladeBattle {
+    firstBeyblade: Beyblade,
+    secondBeyblade: Beyblade
+}
+
 export interface Beyblade {
-    Layer: Layer,
-    Disk: Disk,
+    layer: Layer,
+    disk: Disk,
     // Frame: Frame,
-    Driver: Driver,
-    Attack: number,
-    Defense: number,
-    Stamina: number,
-    Weight: number
+    driver: Driver,
+    attack: number,
+    defense: number,
+    stamina: number,
+    weight: number
 }
 
 export interface Layer {
-    Id: number,
-    Name: string,
-    CanUseDisk: boolean,
-    Weight: number,
-    Attack: number,
-    Defense: number,
-    Stamina: number,
+    id: number,
+    name: string,
+    canUseDisk: boolean,
+    weight: number,
+    attack: number,
+    defense: number,
+    stamina: number,
 }
 
 export interface Disk {
-    Id: number,
-    Name: string,
+    id: number,
+    name: string,
     // CanUseFrame: boolean,
-    Weight: number,
-    Attack: number,
-    Defense: number,
-    Stamina: number,
+    weight: number,
+    attack: number,
+    defense: number,
+    stamina: number,
 }
 
 /*export interface Frame {
@@ -36,17 +41,17 @@ export interface Disk {
 }*/
 
 export interface Driver{
-    Id: number,
-    Name: string,
-    Type: DriverType,
-    Weight: number,
-    Attack: number,
-    Defense: number,
-    Stamina: number,
+    id: number,
+    name: string,
+    type: DriverType,
+    weight: number,
+    attack: number,
+    defense: number,
+    stamina: number,
 }
 
 export enum DriverType{
-    Attack = 0,
-    Defense = 1,
-    Stamina = 2
+    attack = 0,
+    defense = 1,
+    stamina = 2
 }

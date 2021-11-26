@@ -1,1 +1,11 @@
-<p>home-page works!</p>
+<h1 style="color: red;">Beyblade battle</h1>
+<div>
+    <button (click)="activateDeactivateBattleSetUp()" *ngIf="!doABattle">Set up a battle</button>
+    <app-battle-set-up *ngIf="doABattle" [layers]="layers$ | async" [disks]="disks$ | async" [drivers]="drivers$ | async"></app-battle-set-up>
+    <button (click)="activateDeactivateBattleSetUp()" *ngIf="doABattle">Cancel the battle</button>
+</div>
+<div>
+    <button (click)="activateDeactivatePartsRegistration()" *ngIf="!registerParts">Register parts</button>
+    <app-parts-registration *ngIf="registerParts"></app-parts-registration>
+    <button (click)="activateDeactivatePartsRegistration()" *ngIf="registerParts">Cancel</button>
+</div>

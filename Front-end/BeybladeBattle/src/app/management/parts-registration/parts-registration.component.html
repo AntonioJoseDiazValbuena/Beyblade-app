@@ -1,1 +1,18 @@
-<p>parts-registration works!</p>
+<div>
+    <h1>Register Parts</h1>
+    <div>
+        <button *ngIf="!registerLayer" (click)="activateDeactivateRegisterLayer()">Register layer</button>
+        <app-layer *ngIf="registerLayer"></app-layer>
+        <button *ngIf="registerLayer" (click)="activateDeactivateRegisterLayer()">Close layer registration</button>
+    </div>
+    <div>
+        <button *ngIf="!registerDisk" (click)="activateDeactivateRegisterDisk()">Register disk</button>
+        <app-disk *ngIf="registerDisk"></app-disk>
+        <button *ngIf="registerDisk" (click)="activateDeactivateRegisterDisk()">Close disk registration</button>
+    </div>
+    <div>
+        <button *ngIf="!registerDriver" (click)="activateDeactivateRegisterDriver()">Register driver</button>
+        <app-driver *ngIf="registerDriver"></app-driver>
+        <button *ngIf="registerDriver" (click)="activateDeactivateRegisterDriver()">Close driver registration</button>
+    </div>
+</div>

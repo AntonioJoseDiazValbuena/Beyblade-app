@@ -3,18 +3,18 @@
         <h1>First Beyblade</h1>
         <div>
             <div>
-                <p>Layer</p>
-                <select name="layer" id="layer">
-                    <option value="layer" *ngFor="let layer of layers">
-                        {{layer.Name}}
+                <p>layer</p>
+                <select name="layer" id="layer" [(ngModel)]="firstBeyblade.layer">
+                    <option [ngValue]="layer" *ngFor="let layer of layers">
+                        {{layer.name}}
                     </option>
                 </select>
             </div>
             <div>
-                <p>Disk</p>
-                <select name="disk" id="disk">
-                    <option value="disk" *ngFor="let disk of disks">
-                        {{disk.Name}}
+                <p>disk</p>
+                <select name="disk" id="disk" [(ngModel)]="firstBeyblade.disk">
+                    <option [ngValue]="disk" *ngFor="let disk of disks">
+                        {{disk.name}}
                     </option>
                 </select>
             </div>
@@ -22,15 +22,15 @@
                 <p>Frame</p>
                 <select name="frame" id="frame">
                     <option value="frame" *ngFor="let frame of frames">
-                        {{frame.Name}}
+                        {{frame.name}}
                     </option>
                 </select>
             </div> -->
             <div>
-                <p>Driver</p>
-                <select name="driver" id="driver">
-                    <option value="driver" *ngFor="let driver of drivers">
-                        {{driver.Name}}
+                <p>driver</p>
+                <select name="driver" id="driver" [(ngModel)]="firstBeyblade.driver">
+                    <option [ngValue]="driver" *ngFor="let driver of drivers">
+                        {{driver.name}}
                     </option>
                 </select>
             </div>
@@ -40,18 +40,18 @@
         <h1>Second Beyblade</h1>
         <div>
             <div>
-                <p>Layer</p>
-                <select name="layer" id="layer">
-                    <option value="layer" *ngFor="let layer of layers">
-                        {{layer.Name}}
+                <p>layer</p>
+                <select name="layer" id="layer" [(ngModel)]="secondBeyblade.layer">
+                    <option [ngValue]="layer" *ngFor="let layer of layers">
+                        {{layer.name}}
                     </option>
                 </select>
             </div>
             <div>
-                <p>Disk</p>
-                <select name="disk" id="disk">
-                    <option value="disk" *ngFor="let disk of disks">
-                        {{disk.Name}}
+                <p>disk</p>
+                <select name="disk" id="disk" [(ngModel)]="secondBeyblade.disk">
+                    <option [ngValue]="disk" disk *ngFor="let disk of disks">
+                        {{disk.name}}
                     </option>
                 </select>
             </div>
@@ -59,18 +59,25 @@
                 <p>Frame</p>
                 <select name="frame" id="frame">
                     <option value="frame" *ngFor="let frame of frames">
-                        {{frame.Name}}
+                        {{frame.name}}
                     </option>
                 </select>
             </div> -->
             <div>
-                <p>Driver</p>
-                <select name="driver" id="driver">
-                    <option value="driver" *ngFor="let driver of drivers">
-                        {{driver.Name}}
+                <p>driver</p>
+                <select name="driver" id="driver" [(ngModel)]="secondBeyblade.driver">
+                    <option [ngValue]="driver" *ngFor="let driver of drivers">
+                        {{driver.name}}
                     </option>
                 </select>
             </div>
         </div>
+        <div *ngIf="alert">
+            <strong>{{alertMessage}}</strong>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close" (click)="closeAlert()">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <button (click)="startBattle()">Start battle</button>
     </div>
 </h1>

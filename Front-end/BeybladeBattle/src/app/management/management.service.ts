@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Disk, Driver, /*Frame,*/ Layer } from '../app.models';
+import { BeybladeBattle, Disk, Driver, /*Frame,*/ Layer } from '../app.models';
 
-const baseURL = 'localhost'
+const baseURL = 'https://localhost:44339/BeybladeManagement'
 
 @Injectable({
   providedIn: 'root'
@@ -11,6 +11,12 @@ const baseURL = 'localhost'
 export class ManagementService {
 
   constructor(private http: HttpClient) { }
+
+  battle(beybladeBattle: BeybladeBattle): Observable<string>{
+    const url = `${baseURL}/Battle`;
+
+    return this.http.post<string>(url, beybladeBattle);
+  }
 
   obtainLayers(): Observable<Layer[]>{
     const url = `${baseURL}/Layers`;
@@ -55,7 +61,7 @@ export class ManagementService {
   }
 
   registerDriver(driver: Driver): Observable<void>{
-    const url = `${baseURL}/Layer`;
+    const url = `${baseURL}/Driver`;
 
     return this.http.post<void>(url, driver);
   }

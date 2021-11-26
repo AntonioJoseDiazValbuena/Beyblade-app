@@ -9,11 +9,13 @@ import { ManagementService } from '../management.service';
   styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent implements OnInit {
-  layers$: Observable<Layer[]> | undefined;
-  disks$: Observable<Disk[]> | undefined;
+  layers$: Observable<Layer[]> | null = null;
+  disks$: Observable<Disk[]> | null = null;
   // frames$: Observable<Frame[]> | undefined;
-  drivers$: Observable<Driver[]> | undefined;
-  
+  drivers$: Observable<Driver[]> | null = null;
+  doABattle: boolean = false;
+  registerParts: boolean = false;
+
   constructor(private managementService: ManagementService) { }
 
   ngOnInit() {
@@ -23,4 +25,11 @@ export class HomePageComponent implements OnInit {
     this.drivers$ = this.managementService.obtainDrivers();
   }
 
+  activateDeactivateBattleSetUp() {
+    this.doABattle = !this.doABattle;
+  }
+
+  activateDeactivatePartsRegistration() {
+    this.registerParts = !this.registerParts;
+  }
 }
