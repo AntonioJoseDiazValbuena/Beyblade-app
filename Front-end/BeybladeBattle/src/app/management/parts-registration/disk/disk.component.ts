@@ -32,7 +32,7 @@ export class DiskComponent implements OnInit {
     }
 
     this.managementService.registerDisk(disk).subscribe(() => {
-      this.alertMessage = 'The driver has been saved.';
+      this.alertMessage = 'The disk has been saved.';
       this.alert = true;
     });
   }
