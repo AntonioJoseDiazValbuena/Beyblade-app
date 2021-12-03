@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { BeybladeBattle, Disk, Driver, /*Frame,*/ Layer } from '../app.models';
+import { map } from 'rxjs/operators';
 
 const baseURL = 'https://localhost:44339/BeybladeManagement'
 
@@ -12,31 +13,33 @@ export class ManagementService {
 
   constructor(private http: HttpClient) { }
 
-  battle(beybladeBattle: BeybladeBattle): Observable<string>{
+  battle(beybladeBattle: BeybladeBattle): Observable<string> {
     const url = `${baseURL}/Battle`;
 
-    return this.http.post<string>(url, beybladeBattle);
+    return this.http.post<{ response: string }>(url, beybladeBattle).pipe(
+      map((data) => data.response)
+    );
   }
 
-  obtainLayers(): Observable<Layer[]>{
+  obtainLayers(): Observable<Layer[]> {
     const url = `${baseURL}/Layers`;
 
     return this.http.get<Layer[]>(url);
   }
 
-  registerLayer(layer: Layer): Observable<void>{
+  registerLayer(layer: Layer): Observable<void> {
     const url = `${baseURL}/Layer`;
 
     return this.http.post<void>(url, layer);
   }
 
-  obtainDisks(): Observable<Disk[]>{
+  obtainDisks(): Observable<Disk[]> {
     const url = `${baseURL}/Disks`;
 
     return this.http.get<Disk[]>(url);
   }
-  
-  registerDisk(disk: Disk): Observable<void>{
+
+  registerDisk(disk: Disk): Observable<void> {
     const url = `${baseURL}/Disk`;
 
     return this.http.post<void>(url, disk);
@@ -54,13 +57,13 @@ export class ManagementService {
     return this.http.post<void>(url, frame);
   }*/
 
-  obtainDrivers(): Observable<Driver[]>{
+  obtainDrivers(): Observable<Driver[]> {
     const url = `${baseURL}/Drivers`;
 
     return this.http.get<Driver[]>(url);
   }
 
-  registerDriver(driver: Driver): Observable<void>{
+  registerDriver(driver: Driver): Observable<void> {
     const url = `${baseURL}/Driver`;
 
     return this.http.post<void>(url, driver);

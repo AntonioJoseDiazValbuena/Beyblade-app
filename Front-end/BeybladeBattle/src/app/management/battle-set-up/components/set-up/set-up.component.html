@@ -1,0 +1,82 @@
+<h1>
+    <div>
+        <h1>First Beyblade</h1>
+        <div>
+            <form [formGroup]="firstBeyblade">
+                <div>
+                    <p>Layer</p>
+                    <select name="layer" id="layer" formControlName="layer">
+                        <option [ngValue]="layer" *ngFor="let layer of layers">
+                            {{layer.name}}
+                        </option>
+                    </select>
+                </div>
+                <div>
+                    <p>Disk</p>
+                    <select name="disk" id="disk" formControlName="disk">
+                        <option [ngValue]="disk" *ngFor="let disk of disks">
+                            {{disk.name}}
+                        </option>
+                    </select>
+                </div>
+                <!-- <div>
+                <p>Frame</p>
+                <select name="frame" id="frame">
+                    <option value="frame" *ngFor="let frame of frames">
+                        {{frame.name}}
+                    </option>
+                </select>
+            </div> -->
+                <div>
+                    <p>Driver</p>
+                    <select name="driver" id="driver" formControlName="driver">
+                        <option [ngValue]="driver" *ngFor="let driver of drivers">
+                            {{driver.name}}
+                        </option>
+                    </select>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div>
+        <h1>Second Beyblade</h1>
+        <div>
+            <form [formGroup]="secondBeyblade">
+                <div>
+                    <p>Layer</p>
+                    <select name="layer" id="layer" formControlName="layer">
+                        <option [ngValue]="layer" *ngFor="let layer of layers">
+                            {{layer.name}}
+                        </option>
+                    </select>
+                </div>
+                <div>
+                    <p>Disk</p>
+                    <select name="disk" id="disk" formControlName="disk">
+                        <option [ngValue]="disk" disk *ngFor="let disk of disks">
+                            {{disk.name}}
+                        </option>
+                    </select>
+                </div>
+                <!-- <div>
+                <p>Frame</p>
+                <select name="frame" id="frame">
+                    <option value="frame" *ngFor="let frame of frames">
+                        {{frame.name}}
+                    </option>
+                </select>
+                </div> -->
+                <div>
+                    <p>Driver</p>
+                    <select name="driver" id="driver" formControlName="driver">
+                        <option [ngValue]="driver" *ngFor="let driver of drivers">
+                            {{driver.name}}
+                        </option>
+                    </select>
+                </div>
+            </form>
+        </div>
+        <!-- <button [disabled]="firstBeyblade.invalid || secondBeyblade.invalid" (click)="startBattle()">Start battle</button> -->
+        <button (click)="startBattle()">Start battle</button>
+    </div>
+</h1>

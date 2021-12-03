@@ -9,20 +9,12 @@ import { ManagementService } from '../management.service';
   styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent implements OnInit {
-  layers$: Observable<Layer[]> | null = null;
-  disks$: Observable<Disk[]> | null = null;
-  // frames$: Observable<Frame[]> | undefined;
-  drivers$: Observable<Driver[]> | null = null;
   doABattle: boolean = false;
   registerParts: boolean = false;
 
-  constructor(private managementService: ManagementService) { }
+  constructor() { }
 
   ngOnInit() {
-    this.layers$ = this.managementService.obtainLayers();
-    this.disks$ = this.managementService.obtainDisks();
-    // this.frames$ = this.managementService.obtainFrames();
-    this.drivers$ = this.managementService.obtainDrivers();
   }
 
   activateDeactivateBattleSetUp() {

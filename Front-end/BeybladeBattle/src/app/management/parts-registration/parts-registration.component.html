@@ -2,17 +2,17 @@
     <h1>Register Parts</h1>
     <div>
         <button *ngIf="!registerLayer" (click)="activateDeactivateRegisterLayer()">Register layer</button>
-        <app-layer *ngIf="registerLayer"></app-layer>
+        <app-layer-shell *ngIf="registerLayer"></app-layer-shell>
         <button *ngIf="registerLayer" (click)="activateDeactivateRegisterLayer()">Close layer registration</button>
     </div>
     <div>
         <button *ngIf="!registerDisk" (click)="activateDeactivateRegisterDisk()">Register disk</button>
-        <app-disk *ngIf="registerDisk"></app-disk>
+        <app-disk-shell *ngIf="registerDisk"></app-disk-shell>
         <button *ngIf="registerDisk" (click)="activateDeactivateRegisterDisk()">Close disk registration</button>
     </div>
     <div>
         <button *ngIf="!registerDriver" (click)="activateDeactivateRegisterDriver()">Register driver</button>
-        <app-driver *ngIf="registerDriver"></app-driver>
+        <app-driver-shell *ngIf="registerDriver"></app-driver-shell>
         <button *ngIf="registerDriver" (click)="activateDeactivateRegisterDriver()">Close driver registration</button>
     </div>
 </div>

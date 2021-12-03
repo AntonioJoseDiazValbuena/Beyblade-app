@@ -1,0 +1,7 @@
+$color-red: red;
+
+$main-units: ();
+
+@for $i from 1 to 100 {
+    $main-units: map-merge($main-units, ('#{$i}': #{$i}px));
+}

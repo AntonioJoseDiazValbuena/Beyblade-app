@@ -15,7 +15,7 @@ export interface Beyblade {
 }
 
 export interface Layer {
-    id: number,
+    id?: number,
     name: string,
     canUseDisk: boolean,
     weight: number,
@@ -25,7 +25,7 @@ export interface Layer {
 }
 
 export interface Disk {
-    id: number,
+    id?: number,
     name: string,
     // CanUseFrame: boolean,
     weight: number,
@@ -41,7 +41,7 @@ export interface Disk {
 }*/
 
 export interface Driver{
-    id: number,
+    id?: number,
     name: string,
     type: DriverType,
     weight: number,

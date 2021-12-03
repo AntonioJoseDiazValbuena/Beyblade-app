@@ -1,0 +1,29 @@
+<div>
+    <form [formGroup]="layer">
+        <h2>Layer</h2>
+        <div>
+            <h3>Name</h3>
+            <input type="text" minlength="1" maxlength="50" formControlName="name">
+        </div>
+        <div>
+            <h3>Attack</h3>
+            <input type="number" min="1" max="100" formControlName="attack">
+        </div>
+        <div>
+            <h3>Defense</h3>
+            <input type="number" min="1" max="100" formControlName="defense">
+        </div>
+        <div>
+            <h3>Stamina</h3>
+            <input type="number" min="1" max="100" formControlName="stamina">
+        </div>
+        <div>
+            <h3>Weight</h3>
+            <input type="number" min="1" max="40" formControlName="weight">
+        </div>
+    </form>
+</div>
+<div>
+    <!-- <button [disabled]="layer.invalid" (click)="save()">Save</button> -->
+    <button (click)="save()">Save</button>
+</div>

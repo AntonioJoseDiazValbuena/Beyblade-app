@@ -22,9 +22,12 @@ namespace Beyblade.Api.Controllers
 
         [HttpPost]
         [Route("Battle")]
-        public string Battle(BeybladeBattle beybladeBattle)
+        public object Battle(BeybladeBattle beybladeBattle)
         {
-            return _beybladeServices.StartBattle(beybladeBattle.FirstBeyblade, beybladeBattle.SecondBeyblade);
+            string response = _beybladeServices.StartBattle(beybladeBattle.FirstBeyblade, beybladeBattle.SecondBeyblade);
+            return new {
+                response
+            };
         }
 
         [HttpGet]
