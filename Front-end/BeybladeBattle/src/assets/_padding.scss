@@ -9,11 +9,13 @@ $padding-variants: (
     "pad-r": "padding-right"
 );
 
-@each $key, $value in $main-units {
-    @each $alias, $property in $padding-variants {
+@each $llave, $value in $main-units {
+    @each $name, $property in $padding-variants {
         
-        .#{$alias}-#{$key} {
-            #{$property}: $value;
+        .felipe {
+            #{
+                $property
+            }: $value;
         }
     }
 }
