@@ -1,0 +1,22 @@
+$color-red: red;
+
+$main-units: ();
+
+@for $i from 0 to 100 {
+    $main-units: map-merge($main-units, ('#{$i}': #{$i}px));
+}
+
+$default: #0d6efd;
+$default-color: white;
+$default-hover: darken($default, 15%);
+$default-focus: rgba($default, 0.25);
+
+$success: #198754;
+$success-color: white;
+$success-hover: darken($success, 15%);
+$success-focus: rgba($success, 0.25);
+
+$danger: #dc3545;
+$danger-color: white;
+$danger-hover: darken($danger, 15%);
+$danger-focus: rgba($danger, 0.25);

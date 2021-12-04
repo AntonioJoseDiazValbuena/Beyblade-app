@@ -1,11 +1,13 @@
-<h1 class="pad-5" style="color: red;">Beyblade battle</h1>
-<div>
-    <button (click)="activateDeactivateBattleSetUp()" *ngIf="!doABattle">Set up a battle</button>
-    <app-battle-set-up *ngIf="doABattle"></app-battle-set-up>
-    <button (click)="activateDeactivateBattleSetUp()" *ngIf="doABattle">Cancel the battle</button>
+<h1 class="pad-0 f-24 mar-0" style="color: red;">Beyblade battle</h1>
+<div class="flex f-row w-100 bor-b-1">
+    <div class="flex-1 mar-t-20">
+        <button routerLink="/doABattle" class="mar-l-0" routerLinkActive #battle="routerLinkActive">Set up a
+            battle</button>
+        <button routerLink="/" *ngIf="battle.isActive" class="danger mar-l-0">Cancel the battle</button>
+    </div>
+    <div class="flex-1 mar-t-20">
+        <button routerLink="/registerParts" routerLinkActive #parts="routerLinkActive">Register parts</button>
+        <button routerLink="/" *ngIf="parts.isActive" class="danger">Cancel</button>
+    </div>
 </div>
-<div>
-    <button (click)="activateDeactivatePartsRegistration()" *ngIf="!registerParts">Register parts</button>
-    <app-parts-registration *ngIf="registerParts"></app-parts-registration>
-    <button (click)="activateDeactivatePartsRegistration()" *ngIf="registerParts">Cancel</button>
-</div>
+<router-outlet></router-outlet>

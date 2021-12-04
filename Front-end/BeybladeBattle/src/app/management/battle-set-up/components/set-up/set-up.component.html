@@ -1,6 +1,8 @@
-<h1>
-    <div>
-        <h1>First Beyblade</h1>
+<!-- <button [disabled]="firstBeyblade.invalid || secondBeyblade.invalid" (click)="startBattle()">Start battle</button> -->
+<button class="success" (click)="startBattle()">Start battle</button>
+<div class="flex f-row w-100 mar-t-20">
+    <div class="flex-1">
+        <h1 class="mar-0 f-15">First Beyblade</h1>
         <div>
             <form [formGroup]="firstBeyblade">
                 <div>
@@ -38,8 +40,8 @@
             </form>
         </div>
     </div>
-    <div>
-        <h1>Second Beyblade</h1>
+    <div class="flex-1">
+        <h1 class="mar-0 f-15">Second Beyblade</h1>
         <div>
             <form [formGroup]="secondBeyblade">
                 <div>
@@ -76,7 +78,5 @@
                 </div>
             </form>
         </div>
-        <!-- <button [disabled]="firstBeyblade.invalid || secondBeyblade.invalid" (click)="startBattle()">Start battle</button> -->
-        <button (click)="startBattle()">Start battle</button>
     </div>
-</h1>
+</div>

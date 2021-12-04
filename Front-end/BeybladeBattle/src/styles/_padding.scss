@@ -1,0 +1,19 @@
+@use 'sass:map';
+
+$padding-variants: (
+    "pad": "padding",
+    "pad-t": "padding-top",
+    "pad-b": "padding-bottom",
+    "pad-l": "padding-left",
+    "pad-r": "padding-right"
+);
+
+@each $key, $value in $main-units {
+    @each $alias, $property in $padding-variants {
+        
+        .#{$alias}-#{$key} {
+            #{$property}: #{$value};
+        }
+    }
+}
+

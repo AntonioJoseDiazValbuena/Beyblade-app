@@ -1,0 +1,19 @@
+@use 'sass:map';
+
+$margin-variants: (
+    "mar": "margin",
+    "mar-t": "margin-top",
+    "mar-b": "margin-bottom",
+    "mar-l": "margin-left",
+    "mar-r": "margin-right"
+);
+
+@each $key, $value in $main-units {
+    @each $alias, $property in $margin-variants {
+        
+        .#{$alias}-#{$key} {
+            #{$property}: #{$value};
+        }
+    }
+}
+

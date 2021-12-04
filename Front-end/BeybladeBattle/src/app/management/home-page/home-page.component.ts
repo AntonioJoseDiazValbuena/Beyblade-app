@@ -8,20 +8,6 @@ import { ManagementService } from '../management.service';
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.scss']
 })
-export class HomePageComponent implements OnInit {
-  doABattle: boolean = false;
-  registerParts: boolean = false;
+export class HomePageComponent {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-  activateDeactivateBattleSetUp() {
-    this.doABattle = !this.doABattle;
-  }
-
-  activateDeactivatePartsRegistration() {
-    this.registerParts = !this.registerParts;
-  }
 }

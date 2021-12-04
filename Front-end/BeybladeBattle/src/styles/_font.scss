@@ -1,0 +1,8 @@
+@use 'sass:map';
+
+@each $key, $value in $main-units {
+    .f-#{$key} {
+        font-size: #{$value};
+    }
+}
+

@@ -1,0 +1,19 @@
+@use 'sass:map';
+
+$border-variants: (
+    "bor": "border",
+    "bor-t": "border-top",
+    "bor-b": "border-bottom",
+    "bor-l": "border-left",
+    "bor-r": "border-right"
+);
+
+@each $key, $value in $main-units {
+    @each $alias, $property in $border-variants {
+        
+        .#{$alias}-#{$key} {
+            #{$property}: #{$value} solid $default;
+        }
+    }
+}
+
