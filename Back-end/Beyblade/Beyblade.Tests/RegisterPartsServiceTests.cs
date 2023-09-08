@@ -29,6 +29,20 @@ namespace Beyblade.Tests
         }
 
         [TestMethod]
+        public void Should_ObtainLayer_IfLayerDoesNotExist_ThrowError()
+        {
+            try
+            {
+                _services.ObtainLayer("Odin");
+                Assert.Fail();
+            }
+            catch (Exception exception)
+            {
+                Assert.AreEqual(BeybladeContext.LAYER_NOT_FOUND, exception.Message);
+            }
+        }
+
+        [TestMethod]
         public void Should_RegisterLayer()
         {
             Layer expectedLayer = new Layer("Ragnaruk", true, 20, 20, 10, 15);
@@ -48,16 +62,42 @@ namespace Beyblade.Tests
         [TestMethod]
         public void Should_RegisterLayer_WhenTryingToRegisterALayerAndTheresRegisteredAlreadyOneWithTheSameName_ThrowError()
         {
-            _services.RegisterLayer(new Layer("Valkyrie", true, 20, 20, 10, 15));
+            _services.RegisterLayer(new Layer("Deathschyther", true, 20, 20, 10, 15));
 
             try
             {
-                _services.RegisterLayer(new Layer("Valkyrie", true, 20, 20, 10, 15));
+                _services.RegisterLayer(new Layer("Deathschyther", true, 20, 20, 10, 15));
                 Assert.Fail();
             }
             catch (Exception exception)
             {
                 Assert.AreEqual(BeybladeContext.LAYER_WITH_SAME_NAME_ALREADY_REGISTERED, exception.Message);
+            }
+        }
+
+        [TestMethod]
+        public void Should_DeleteLayer()
+        {
+            _services.RegisterLayer(new Layer("Valkyrie", true, 20, 20, 10, 15));
+
+            Layer layer = _services.ObtainLayer("Valkyrie");
+
+            Assert.AreEqual("Valkyrie", layer.Name);
+
+            _services.DeleteLayer("Valkyrie");
+        }
+
+        [TestMethod]
+        public void Should_ObtainDisk_IfDiskDoesNotExist_ThrowError()
+        {
+            try
+            {
+                _services.ObtainDisk("Wing'");
+                Assert.Fail();
+            }
+            catch (Exception exception)
+            {
+                Assert.AreEqual(BeybladeContext.DISK_NOT_FOUND, exception.Message);
             }
         }
 
@@ -98,6 +138,18 @@ namespace Beyblade.Tests
             }
         }
 
+        [TestMethod]
+        public void Should_DeleteDisk()
+        {
+            _services.RegisterDisk(new Disk("Boost", 19, 10, 20, 15));
+
+            Disk disk = _services.ObtainDisk("Boost");
+
+            Assert.AreEqual("Boost", disk.Name);
+
+            _services.DeleteDisk("Boost");
+        }
+
         /*[TestMethod]
         public void Should_RegisterFrame()
         {
@@ -128,6 +180,20 @@ namespace Beyblade.Tests
         }*/
 
         [TestMethod]
+        public void Should_ObtainDriver_IfDriverDoesNotExist_ThrowError()
+        {
+            try
+            {
+                _services.ObtainDriver("Bullet");
+                Assert.Fail();
+            }
+            catch (Exception exception)
+            {
+                Assert.AreEqual(BeybladeContext.DRIVER_NOT_FOUND, exception.Message);
+            }
+        }
+
+        [TestMethod]
         public void Should_RegisterDriver()
         {
             Driver expectedDriver = new Driver("Accel", DriverType.Attack, 15, 20, 10, 15);
@@ -154,6 +220,18 @@ namespace Beyblade.Tests
             {
                 Assert.AreEqual(BeybladeContext.DRIVER_WITH_SAME_NAME_ALREADY_REGISTERED, exception.Message);
             }
+        }
+
+        [TestMethod]
+        public void Should_DeleteDriver()
+        {
+            _services.RegisterDriver(new Driver("Mobius", DriverType.Stamina, 15, 20, 10, 15));
+
+            Driver driver = _services.ObtainDriver("Mobius");
+
+            Assert.AreEqual("Mobius", driver.Name);
+
+            _services.DeleteDriver("Mobius");
         }
     }
 }

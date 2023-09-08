@@ -44,6 +44,13 @@ namespace Beyblade.Api.Controllers
             _beybladeServices.RegisterLayer(layer);
         }
 
+        [HttpDelete]
+        [Route("Layer")]
+        public void DeleteLayer(string layerName)
+        {
+            _beybladeServices.DeleteLayer(layerName);
+        }
+
         [HttpGet]
         [Route("Disks")]
         public List<Disk> ObtainDisks()
@@ -56,6 +63,13 @@ namespace Beyblade.Api.Controllers
         public void RegisterDisk(Disk disk)
         {
             _beybladeServices.RegisterDisk(disk);
+        }
+
+        [HttpDelete]
+        [Route("Disk")]
+        public void DeleteDisk(string diskName)
+        {
+            _beybladeServices.DeleteDisk(diskName);
         }
 
         /*[HttpGet]
@@ -84,6 +98,13 @@ namespace Beyblade.Api.Controllers
         public void RegisterDriver(Driver driver)
         {
             _beybladeServices.RegisterDriver(driver);
+        }
+
+        [HttpDelete]
+        [Route("Driver")]
+        public void DeleteDriver(string driverName)
+        {
+            _beybladeServices.DeleteDriver(driverName);
         }
     }
 }

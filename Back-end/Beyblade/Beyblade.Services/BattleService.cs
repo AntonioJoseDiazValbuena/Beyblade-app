@@ -21,10 +21,10 @@ namespace Beyblade.Services
             return Disks.OrderBy(layer => layer.Name.ToLower()).ToList();
         }
 
-        public List<Frame> ObtainFrames()
+        /*public List<Frame> ObtainFrames()
         {
             return Frames.OrderBy(layer => layer.Name.ToLower()).ToList();
-        }
+        }*/
 
         public List<Driver> ObtainDrivers()
         {

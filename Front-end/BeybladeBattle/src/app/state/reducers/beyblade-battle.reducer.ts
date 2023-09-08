@@ -24,6 +24,6 @@ const beybladeBattleReducer = createReducer(
     on(startBattle, (state, action) => ({ ...state, beybladeBattle: { ...action.beybladeBattle } }))
 );
 
-export function reducer(state: BeybladeBattleState | undefined, action: Action) {
+export const reducer = function(state: BeybladeBattleState | undefined, action: Action) {
     return beybladeBattleReducer(state, action);
 };
