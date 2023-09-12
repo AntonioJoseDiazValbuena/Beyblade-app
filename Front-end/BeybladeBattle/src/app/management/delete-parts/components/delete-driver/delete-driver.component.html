@@ -1,0 +1,11 @@
+<form [formGroup]="driverToDelete">
+    <div>
+        <p>Driver</p>
+        <select name="driver" id="driver" formControlName="driver">
+            <option [ngValue]="driver" *ngFor="let driver of drivers">
+                {{driver.name}}
+            </option>
+        </select>
+    </div>
+</form>
+<button class="danger" (click)="delete()">Delete</button>

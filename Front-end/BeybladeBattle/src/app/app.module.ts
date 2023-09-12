@@ -20,6 +20,13 @@ import { DriverShellComponent } from './management/parts-registration/containers
 import * as fromBeybladeBattleManagement from './state';
 import { BattleSetUpShellComponent } from './management/battle-set-up/containers/battle-set-up-shell/battle-set-up-shell.component';
 import { SetUpComponent } from './management/battle-set-up/components/set-up/set-up.component';
+import { DeletePartsComponent } from './management/delete-parts/delete-parts.component';
+import { DeleteLayerShellComponent } from './management/delete-parts/containers/delete-layer-shell/delete-layer-shell.component';
+import { DeleteDriverShellComponent } from './management/delete-parts/containers/delete-driver-shell/delete-driver-shell.component';
+import { DeleteDiskShellComponent } from './management/delete-parts/containers/delete-disk-shell/delete-disk-shell.component';
+import { DeleteDiskComponent } from './management/delete-parts/components/delete-disk/delete-disk.component';
+import { DeleteDriverComponent } from './management/delete-parts/components/delete-driver/delete-driver.component';
+import { DeleteLayerComponent } from './management/delete-parts/components/delete-layer/delete-layer.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +41,14 @@ import { SetUpComponent } from './management/battle-set-up/components/set-up/set
     DiskShellComponent,
     DriverShellComponent,
     BattleSetUpShellComponent,
-    SetUpComponent
+    SetUpComponent,
+    DeletePartsComponent,
+    DeleteLayerShellComponent,
+    DeleteDriverShellComponent,
+    DeleteDiskShellComponent,
+    DeleteDiskComponent,
+    DeleteDriverComponent,
+    DeleteLayerComponent
   ],
   imports: [
     BrowserModule,

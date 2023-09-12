@@ -45,10 +45,10 @@ namespace Beyblade.Api.Controllers
         }
 
         [HttpDelete]
-        [Route("Layer")]
-        public void DeleteLayer(string layerName)
+        [Route("Layer/{layerId}")]
+        public void DeleteLayer(int layerId)
         {
-            _beybladeServices.DeleteLayer(layerName);
+            _beybladeServices.DeleteLayer(layerId);
         }
 
         [HttpGet]
@@ -66,10 +66,10 @@ namespace Beyblade.Api.Controllers
         }
 
         [HttpDelete]
-        [Route("Disk")]
-        public void DeleteDisk(string diskName)
+        [Route("Disk/{diskId}")]
+        public void DeleteDisk(int diskId)
         {
-            _beybladeServices.DeleteDisk(diskName);
+            _beybladeServices.DeleteDisk(diskId);
         }
 
         /*[HttpGet]
@@ -101,10 +101,10 @@ namespace Beyblade.Api.Controllers
         }
 
         [HttpDelete]
-        [Route("Driver")]
-        public void DeleteDriver(string driverName)
+        [Route("Driver/{driverId}")]
+        public void DeleteDriver(int driverId)
         {
-            _beybladeServices.DeleteDriver(driverName);
+            _beybladeServices.DeleteDriver(driverId);
         }
     }
 }

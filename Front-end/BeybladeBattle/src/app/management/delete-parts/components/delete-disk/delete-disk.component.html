@@ -1,0 +1,11 @@
+<form [formGroup]="diskToDelete">
+    <div>
+        <p>Disk</p>
+        <select name="disk" id="disk" formControlName="disk">
+            <option [ngValue]="disk" *ngFor="let disk of disks">
+                {{disk.name}}
+            </option>
+        </select>
+    </div>
+</form>
+<button class="danger" (click)="delete()">Delete</button>

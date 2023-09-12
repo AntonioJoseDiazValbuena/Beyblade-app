@@ -51,6 +51,14 @@ export class BeybladeBattleEffects {
         )
     ));
 
+    deleteLayer$ = createEffect(() => this.actions$.pipe(
+        ofType(battleActions.deleteLayer),
+        mergeMap((action) => this.managementService.deleteLayer(action.id)
+            .pipe(
+                switchMap(() => [battleActions.deleteLayerSuccesful(), battleActions.obtainLayers()])
+            ))
+    ));
+
     registerDisk$ = createEffect(() => this.actions$.pipe(
         ofType(battleActions.registerDisk),
         mergeMap((action) => this.managementService.registerDisk(action.disk)
@@ -60,6 +68,14 @@ export class BeybladeBattleEffects {
         )
     ));
 
+    deleteDisk$ = createEffect(() => this.actions$.pipe(
+        ofType(battleActions.deleteDisk),
+        mergeMap((action) => this.managementService.deleteDisk(action.id)
+            .pipe(
+                switchMap(() => [battleActions.deleteDiskSuccesful(), battleActions.obtainDisks()])
+            ))
+    ));
+
     registerDriver$ = createEffect(() => this.actions$.pipe(
         ofType(battleActions.registerDriver),
         mergeMap((action) => this.managementService.registerDriver(action.driver)
@@ -67,6 +83,14 @@ export class BeybladeBattleEffects {
                 map(() => battleActions.registerDriverSuccessful())
             )
         )
+    ));
+
+    deleteDriver$ = createEffect(() => this.actions$.pipe(
+        ofType(battleActions.deleteDriver),
+        mergeMap((action) => this.managementService.deleteDriver(action.id)
+            .pipe(
+                switchMap(() => [battleActions.deleteDriverSuccesful(), battleActions.obtainDrivers()])
+            ))
     ));
 
     startBattle$ = createEffect(() => this.actions$.pipe(
@@ -90,14 +114,42 @@ export class BeybladeBattleEffects {
 
     registerLayerSuccessful$ = createEffect(() => this.actions$.pipe(
         ofType(battleActions.registerLayerSuccessful),
-        tap(() => {
-            console.count('etra aca tantas veces:');
-            Swal.fire({
-                title: 'Success!',
-                text: 'The layer has been registered',
-                icon: 'success'
-            })
+        tap(() => Swal.fire({
+            title: 'Success!',
+            text: 'The layer has been registered',
+            icon: 'success'
+        }
+        ))
+    ), { dispatch: false });
+
+    deleteLayerSuccesful$ = createEffect(() => this.actions$.pipe(
+        ofType(battleActions.deleteLayerSuccesful),
+        tap(() => Swal.fire({
+            title: 'Success!',
+            text: 'The layer has been deleted',
+            icon: 'success'
         })
+        )
+    ), { dispatch: false });
+
+    deleteDiskSuccesful$ = createEffect(() => this.actions$.pipe(
+        ofType(battleActions.deleteDiskSuccesful),
+        tap(() => Swal.fire({
+            title: 'Success!',
+            text: 'The disk has been deleted',
+            icon: 'success'
+        })
+        )
+    ), { dispatch: false });
+
+    deleteDriverSuccesful$ = createEffect(() => this.actions$.pipe(
+        ofType(battleActions.deleteDriverSuccesful),
+        tap(() => Swal.fire({
+            title: 'Success!',
+            text: 'The driver has been deleted',
+            icon: 'success'
+        })
+        )
     ), { dispatch: false });
 
     registerDiskSuccessful$ = createEffect(() => this.actions$.pipe(

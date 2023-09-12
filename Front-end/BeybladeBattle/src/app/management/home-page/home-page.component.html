@@ -9,5 +9,9 @@
         <button routerLink="/registerParts" routerLinkActive #parts="routerLinkActive">Register parts</button>
         <button routerLink="/" *ngIf="parts.isActive" class="danger">Cancel</button>
     </div>
+    <div class="flex-1 mar-t-20">
+        <button routerLink="/deleteParts" routerLinkActive #deleteParts="routerLinkActive">Delete parts</button>
+        <button routerLink="/" *ngIf="deleteParts.isActive" class="danger">Cancel</button>
+    </div>
 </div>
 <router-outlet></router-outlet>

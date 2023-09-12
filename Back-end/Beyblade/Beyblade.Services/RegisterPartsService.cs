@@ -1,6 +1,7 @@
 ﻿using Beyblade.Entities;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 
@@ -16,10 +17,10 @@ namespace Beyblade.Services
         public static readonly string DISK_NOT_FOUND = "Disk not found";
         public static readonly string DRIVER_NOT_FOUND = "Driver not found";
 
-        public Layer ObtainLayer(string name)
+        public Layer ObtainLayer(int id)
         {
-            Layer layer = Layers.FirstOrDefault(prop => prop.Name == name);
-            if (layer == null)
+            Layer layer = Layers.FirstOrDefault(prop => prop.Id == id);
+            if (layer is null)
                 throw new Exception(LAYER_NOT_FOUND);
 
             return layer;
@@ -34,7 +35,7 @@ namespace Beyblade.Services
             SaveChanges();
         }
 
-        public void DeleteLayer(string name)
+        public void DeleteLayer(int name)
         {
             Layer layerToDelete = ObtainLayer(name);
 
@@ -43,9 +44,9 @@ namespace Beyblade.Services
             SaveChanges();
         }
 
-        public Disk ObtainDisk(string name)
+        public Disk ObtainDisk(int id)
         {
-            Disk disk = Disks.FirstOrDefault(prop => prop.Name == name);
+            Disk disk = Disks.FirstOrDefault(prop => prop.Id == id);
             if (disk == null)
                 throw new Exception(DISK_NOT_FOUND);
 
@@ -61,9 +62,9 @@ namespace Beyblade.Services
             SaveChanges();
         }
 
-        public void DeleteDisk(string name)
+        public void DeleteDisk(int id)
         {
-            Disk diskToDelete = ObtainDisk(name);
+            Disk diskToDelete = ObtainDisk(id);
 
             Disks.Remove(diskToDelete);
 
@@ -84,9 +85,9 @@ namespace Beyblade.Services
             SaveChanges();
         }*/
 
-        public Driver ObtainDriver(string name)
+        public Driver ObtainDriver(int id)
         {
-            Driver driver = Drivers.FirstOrDefault(prop => prop.Name == name);
+            Driver driver = Drivers.FirstOrDefault(prop => prop.Id == id);
             if (driver == null)
                 throw new Exception(DRIVER_NOT_FOUND);
 
@@ -102,9 +103,9 @@ namespace Beyblade.Services
             SaveChanges();
         }
 
-        public void DeleteDriver(string name)
+        public void DeleteDriver(int id)
         {
-            Driver driverToDelete = ObtainDriver(name);
+            Driver driverToDelete = ObtainDriver(id);
 
             Drivers.Remove(driverToDelete);
 

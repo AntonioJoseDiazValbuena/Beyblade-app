@@ -1,0 +1,11 @@
+<form [formGroup]="layerToDelete">
+    <div>
+        <p>Layer</p>
+        <select name="layer" id="layer" formControlName="layer">
+            <option [ngValue]="layer" *ngFor="let layer of layers">
+                {{layer.name}}
+            </option>
+        </select>
+    </div>
+</form>
+<button class="danger" (click)="delete()">Delete</button>

@@ -39,6 +39,15 @@ export const registerLayerSuccessful = createAction(
     `${origin} Register layer successful`
 );
 
+export const deleteLayer = createAction(
+    `${origin} Delete layer`,
+    props<{ id: number }>()
+);
+
+export const deleteLayerSuccesful = createAction(
+    `${origin} Delete layer succesful`
+);
+
 export const registerDisk = createAction(
     `${origin} Register disk`,
     props<{ disk: Disk }>()
@@ -46,6 +55,14 @@ export const registerDisk = createAction(
 
 export const registerDiskSuccessful = createAction(
     `${origin} Register disk successful`
+);
+export const deleteDisk = createAction(
+    `${origin} Delete Disk`,
+    props<{ id: number }>()
+);
+
+export const deleteDiskSuccesful = createAction(
+    `${origin} Delete disk succesful`
 );
 
 export const registerDriver = createAction(
@@ -56,6 +73,16 @@ export const registerDriver = createAction(
 export const registerDriverSuccessful = createAction(
     `${origin} Register driver successful`
 );
+
+export const deleteDriver = createAction(
+    `${origin} Delete Driver`,
+    props<{ id: number }>()
+);
+
+export const deleteDriverSuccesful = createAction(
+    `${origin} Delete driver succesful`
+);
+
 
 export const startBattle = createAction(
     `${origin} Start battle`,

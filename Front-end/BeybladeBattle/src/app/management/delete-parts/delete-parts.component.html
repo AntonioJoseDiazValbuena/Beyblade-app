@@ -1,0 +1,20 @@
+<div>
+    <h1 class="mar-0 f-15">Delete Parts</h1>
+    <div class="flex f-row">
+        <div class="mar-r-10">
+            <button *ngIf="!deleteLayer" (click)="activateDeactivateDeleteLayer()">Delete layer</button>
+            <button class="danger" *ngIf="deleteLayer" (click)="activateDeactivateDeleteLayer()">Cancel layer delete</button>
+            <app-delete-layer-shell *ngIf="deleteLayer"></app-delete-layer-shell>
+        </div>
+        <div class="mar-r-10">
+            <button *ngIf="!deleteDisk" (click)="activateDeactivateDeleteDisk()">Delete disk</button>
+            <button class="danger" *ngIf="deleteDisk" (click)="activateDeactivateDeleteDisk()">Cancel disk delete</button>
+            <app-delete-disk-shell *ngIf="deleteDisk"></app-delete-disk-shell>
+        </div>
+        <div class="mar-r-10">
+            <button *ngIf="!deleteDriver" (click)="activateDeactivateDeleteDriver()">Delete driver</button>
+            <button class="danger" *ngIf="deleteDriver" (click)="activateDeactivateDeleteDriver()">Cancel driver delete</button>
+            <app-delete-driver-shell *ngIf="deleteDriver"></app-delete-driver-shell>
+        </div>
+    </div>
+</div>

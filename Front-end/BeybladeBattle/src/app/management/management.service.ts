@@ -33,16 +33,34 @@ export class ManagementService {
     return this.http.post<void>(url, layer);
   }
 
+  deleteLayer(id: number): Observable<void> {
+    const url = `${baseURL}/Layer/${id}`;
+
+    return this.http.delete<void>(url);
+  }
+
   obtainDisks(): Observable<Disk[]> {
     const url = `${baseURL}/Disks`;
 
     return this.http.get<Disk[]>(url);
   }
 
+  deleteDisk(id: number): Observable<void> {
+    const url = `${baseURL}/Disk/${id}`;
+
+    return this.http.delete<void>(url);
+  }
+
   registerDisk(disk: Disk): Observable<void> {
     const url = `${baseURL}/Disk`;
 
     return this.http.post<void>(url, disk);
+  }
+
+  deleteDriver(id: number): Observable<void> {
+    const url = `${baseURL}/Driver/${id}`;
+
+    return this.http.delete<void>(url);
   }
 
   /*obtainFrames(): Observable<Frame[]>{

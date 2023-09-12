@@ -21,7 +21,7 @@ namespace Beyblade.Tests
         {
             ServiceCollection serviceCollection = new ServiceCollection();
             serviceCollection.AddDbContext<IBeybladeServices, BeybladeContext>((prov, obj) => {
-                obj.UseInMemoryDatabase("Tests");
+                obj.UseInMemoryDatabase(Guid.NewGuid().ToString());
             });
 
             _servicesProvider = serviceCollection.BuildServiceProvider();
@@ -33,7 +33,7 @@ namespace Beyblade.Tests
         {
             try
             {
-                _services.ObtainLayer("Odin");
+                _services.ObtainLayer(9);
                 Assert.Fail();
             }
             catch (Exception exception)
@@ -49,7 +49,7 @@ namespace Beyblade.Tests
 
             _services.RegisterLayer(new Layer("Ragnaruk", true, 20, 20, 10, 15));
 
-            Layer actualLayer = _services.ObtainLayer("Ragnaruk");
+            Layer actualLayer = _services.ObtainLayer(1);
 
             Assert.AreEqual(expectedLayer.Name, actualLayer.Name);
             Assert.AreEqual(expectedLayer.CanUseDisk, actualLayer.CanUseDisk);
@@ -80,11 +80,21 @@ namespace Beyblade.Tests
         {
             _services.RegisterLayer(new Layer("Valkyrie", true, 20, 20, 10, 15));
 
-            Layer layer = _services.ObtainLayer("Valkyrie");
+            Layer layer = _services.ObtainLayer(1);
 
             Assert.AreEqual("Valkyrie", layer.Name);
 
-            _services.DeleteLayer("Valkyrie");
+            _services.DeleteLayer(1);
+
+            try
+            {
+                _services.ObtainLayer(1);
+                Assert.Fail();
+            }
+            catch (Exception exception)
+            {
+                Assert.AreEqual(BeybladeContext.LAYER_NOT_FOUND, exception.Message);
+            }
         }
 
         [TestMethod]
@@ -92,7 +102,7 @@ namespace Beyblade.Tests
         {
             try
             {
-                _services.ObtainDisk("Wing'");
+                _services.ObtainDisk(1);
                 Assert.Fail();
             }
             catch (Exception exception)
@@ -110,7 +120,7 @@ namespace Beyblade.Tests
             //_services.RegisterDisk(new Disk("Wing", false, 19, 20, 10, 15));
             _services.RegisterDisk(new Disk("Wing", 19, 20, 10, 15));
 
-            Disk actualDisk = _services.ObtainDisk("Wing");
+            Disk actualDisk = _services.ObtainDisk(1);
 
             Assert.AreEqual(expectedDisk.Name, actualDisk.Name);
             //Assert.AreEqual(expectedDisk.CanUseFrame, actualDisk.CanUseFrame);
@@ -124,12 +134,12 @@ namespace Beyblade.Tests
         public void Should_RegisterDisk_WhenTryingToRegisterADiskAndTheresRegisteredAlreadyOneWithTheSameName_ThrowError()
         {
             //_services.RegisterDisk(new Disk("Heavy", false, 19, 10, 20, 15));
-            _services.RegisterDisk(new Disk("Heavy", 19, 10, 20, 15));
+            _services.RegisterDisk(new Disk("Wing", 19, 10, 20, 15));
 
             try
             {
                 //_services.RegisterDisk(new Disk("Heavy", false, 19, 10, 20, 15));
-                _services.RegisterDisk(new Disk("Heavy", 19, 10, 20, 15));
+                _services.RegisterDisk(new Disk("Wing", 19, 10, 20, 15));
                 Assert.Fail();
             }
             catch (Exception exception)
@@ -143,11 +153,11 @@ namespace Beyblade.Tests
         {
             _services.RegisterDisk(new Disk("Boost", 19, 10, 20, 15));
 
-            Disk disk = _services.ObtainDisk("Boost");
+            Disk disk = _services.ObtainDisk(1);
 
             Assert.AreEqual("Boost", disk.Name);
 
-            _services.DeleteDisk("Boost");
+            _services.DeleteDisk(1);
         }
 
         /*[TestMethod]
@@ -184,7 +194,7 @@ namespace Beyblade.Tests
         {
             try
             {
-                _services.ObtainDriver("Bullet");
+                _services.ObtainDriver(1);
                 Assert.Fail();
             }
             catch (Exception exception)
@@ -200,7 +210,7 @@ namespace Beyblade.Tests
 
             _services.RegisterDriver(new Driver("Accel", DriverType.Attack, 15, 20, 10, 15));
 
-            Driver actualDriver = _services.ObtainDriver("Accel");
+            Driver actualDriver = _services.ObtainDriver(1);
 
             Assert.AreEqual(expectedDriver.Name, actualDriver.Name);
             Assert.AreEqual(expectedDriver.Weight, actualDriver.Weight);
@@ -227,11 +237,11 @@ namespace Beyblade.Tests
         {
             _services.RegisterDriver(new Driver("Mobius", DriverType.Stamina, 15, 20, 10, 15));
 
-            Driver driver = _services.ObtainDriver("Mobius");
+            Driver driver = _services.ObtainDriver(1);
 
             Assert.AreEqual("Mobius", driver.Name);
 
-            _services.DeleteDriver("Mobius");
+            _services.DeleteDriver(1);
         }
     }
 }

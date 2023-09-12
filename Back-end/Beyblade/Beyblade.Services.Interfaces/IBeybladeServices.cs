@@ -7,21 +7,21 @@ namespace Beyblade.Services.Interfaces
     public interface IBeybladeServices
     {
         List<Layer> ObtainLayers();
-        Layer ObtainLayer(string name);
+        Layer ObtainLayer(int id);
         void RegisterLayer(Layer layer);
-        void DeleteLayer(string name);
+        void DeleteLayer(int name);
         List<Disk> ObtainDisks();
-        Disk ObtainDisk(string name);
+        Disk ObtainDisk(int id);
         void RegisterDisk(Disk disk);
-        void DeleteDisk(string name);
+        void DeleteDisk(int id);
         /*List<Frame> ObtainFrames();
         Frame ObtainFrame(string name);
         void RegisterFrame(Frame frame);
         void DeleteFrame(string name);*/
         List<Driver> ObtainDrivers();
-        Driver ObtainDriver(string name);
+        Driver ObtainDriver(int id);
         void RegisterDriver(Driver driver);
-        void DeleteDriver(string name);
+        void DeleteDriver(int id);
 
         string StartBattle(BeybladeE firstBeyblade, BeybladeE secondBeyblade);
     }
