@@ -27,6 +27,8 @@ import { DeleteDiskShellComponent } from './management/delete-parts/containers/d
 import { DeleteDiskComponent } from './management/delete-parts/components/delete-disk/delete-disk.component';
 import { DeleteDriverComponent } from './management/delete-parts/components/delete-driver/delete-driver.component';
 import { DeleteLayerComponent } from './management/delete-parts/components/delete-layer/delete-layer.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -59,7 +61,9 @@ import { DeleteLayerComponent } from './management/delete-parts/components/delet
     StoreModule.forRoot({}),
     StoreModule.forFeature('beybladeBattleManagement', fromBeybladeBattleManagement.reducer),
     EffectsModule.forRoot(),
-    EffectsModule.forFeature([fromBeybladeBattleManagement.BeybladeBattleEffects])
+    EffectsModule.forFeature([fromBeybladeBattleManagement.BeybladeBattleEffects]),
+    BrowserAnimationsModule,
+    MatButtonModule
   ],
   providers: [HttpClientModule],
   bootstrap: [AppComponent]

@@ -1,17 +1,19 @@
 <h1 class="pad-0 f-24 mar-0" style="color: red;">Beyblade battle</h1>
 <div class="flex f-row w-100 bor-b-1">
     <div class="flex-1 mar-t-20">
-        <button routerLink="/doABattle" class="mar-l-0" routerLinkActive #battle="routerLinkActive">Set up a
-            battle</button>
-        <button routerLink="/" *ngIf="battle.isActive" class="danger mar-l-0">Cancel the battle</button>
+        <button routerLink="/doABattle" routerLinkActive routerLinkActive #battle="routerLinkActive" mat-raised-button
+            color="primary">Set up a battle</button>
+        <button routerLink="/" *ngIf="battle.isActive" mat-raised-button color="warn">Close battle</button>
     </div>
     <div class="flex-1 mar-t-20">
-        <button routerLink="/registerParts" routerLinkActive #parts="routerLinkActive">Register parts</button>
-        <button routerLink="/" *ngIf="parts.isActive" class="danger">Cancel</button>
+        <button routerLink="/registerParts" routerLinkActive #parts="routerLinkActive" mat-raised-button
+            color="primary">Register parts</button>
+        <button routerLink="/" *ngIf="parts.isActive" mat-raised-button color="warn">Close registration</button>
     </div>
     <div class="flex-1 mar-t-20">
-        <button routerLink="/deleteParts" routerLinkActive #deleteParts="routerLinkActive">Delete parts</button>
-        <button routerLink="/" *ngIf="deleteParts.isActive" class="danger">Cancel</button>
+        <button routerLink="/deleteParts" routerLinkActive #deleteParts="routerLinkActive" mat-raised-button
+            color="primary">Delete parts</button>
+        <button routerLink="/" *ngIf="deleteParts.isActive" mat-raised-button color="warn">Close parts removal</button>
     </div>
 </div>
 <router-outlet></router-outlet>
