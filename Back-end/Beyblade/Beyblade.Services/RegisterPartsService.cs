@@ -11,7 +11,7 @@ namespace Beyblade.Services
     {
         public static readonly string LAYER_WITH_SAME_NAME_ALREADY_REGISTERED = "There's already a layer with the same name, please insert another name.";
         public static readonly string DISK_WITH_SAME_NAME_ALREADY_REGISTERED = "There's already a disk with the same name, please insert another name.";
-        public static readonly string FRAME_WITH_SAME_NAME_ALREADY_REGISTERED = "There's already a frame with the same name, please insert another name.";
+        //public static readonly string FRAME_WITH_SAME_NAME_ALREADY_REGISTERED = "There's already a frame with the same name, please insert another name.";
         public static readonly string DRIVER_WITH_SAME_NAME_ALREADY_REGISTERED = "There's already a driver with the same name, please insert another name.";
         public static readonly string LAYER_NOT_FOUND = "Layer not found";
         public static readonly string DISK_NOT_FOUND = "Disk not found";
